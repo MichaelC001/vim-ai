@@ -293,7 +293,7 @@ To customize the default configuration, initialize the config variable with a se
 ```vim
 let g:vim_ai_chat = {
 \  "options": {
-\    "model": "o1-preview",
+\    "model": "gpt-6-astra",
 \    "stream": 0,
 \    "temperature": 1,
 \    "max_completion_tokens": 25000,
@@ -367,7 +367,7 @@ let g:vim_ai_complete = {
 \  "provider": "openai",
 \  "prompt": "",
 \  "options": {
-\    "model": "gpt-4o",
+\    "model": "gpt-6.1-sol",
 \    "endpoint_url": "https://api.openai.com/v1/chat/completions",
 \    "max_tokens": 0,
 \    "max_completion_tokens": 0,
@@ -411,7 +411,7 @@ let g:vim_ai_edit = {
 \  "provider": "openai",
 \  "prompt": "",
 \  "options": {
-\    "model": "gpt-4o",
+\    "model": "gpt-6.1-sol",
 \    "endpoint_url": "https://api.openai.com/v1/chat/completions",
 \    "max_tokens": 0,
 \    "max_completion_tokens": 0,
@@ -468,7 +468,7 @@ let g:vim_ai_chat = {
 \  "provider": "openai",
 \  "prompt": "",
 \  "options": {
-\    "model": "gpt-4o",
+\    "model": "gpt-6.1-sol",
 \    "endpoint_url": "https://api.openai.com/v1/chat/completions",
 \    "max_tokens": 0,
 \    "max_completion_tokens": 0,
@@ -513,11 +513,10 @@ let g:vim_ai_image = {
 \  "provider": "openai",
 \  "prompt": "",
 \  "options": {
-\    "model": "dall-e-3",
+\    "model": "gpt-image-2.5-flare-2026-09-08",
 \    "endpoint_url": "https://api.openai.com/v1/images/generations",
-\    "quality": "standard",
+\    "quality": "medium",
 \    "size": "1024x1024",
-\    "style": "vivid",
 \    "request_timeout": 40,
 \    "auth_type": "bearer",
 \    "token_file_path": "",
@@ -649,7 +648,7 @@ function! GitCommitMessageFn()
   let l:prompt = "generate a short commit message from the diff below:\n" . l:diff
   let l:config = {
   \  "options": {
-  \    "model": "gpt-4o",
+  \    "model": "gpt-6.1-sol",
   \    "initial_prompt": ">>> system\nyou are a code assistant",
   \    "temperature": 1,
   \  },

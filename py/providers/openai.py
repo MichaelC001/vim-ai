@@ -188,8 +188,6 @@ class OpenAIProvider():
             'model': options['model'],
             'quality': options['quality'],
             'size': options['size'],
-            'style': options['style'],
-            'response_format': 'b64_json',
         }
         request = { 'prompt': prompt, **openai_options }
         self.utils.print_debug("openai: [{}] request: {}", self.command_type, request)

@@ -66,11 +66,11 @@ let g:vim_ai_image_default = {
 
 " openai provider options
 let g:vim_ai_openai_complete = {
-\  "model": "gpt-4o",
+\  "model": "gpt-6.1-sol",
 \  "endpoint_url": "https://api.openai.com/v1/chat/completions",
 \  "max_tokens": 0,
 \  "max_completion_tokens": 0,
-\  "temperature": 0.1,
+\  "temperature": "",
 \  "request_timeout": 20,
 \  "stream": 1,
 \  "auth_type": "bearer",
@@ -91,11 +91,11 @@ let g:vim_ai_openai_complete = {
 \}
 let g:vim_ai_openai_edit = g:vim_ai_openai_complete
 let g:vim_ai_openai_chat = {
-\  "model": "gpt-4o",
+\  "model": "gpt-6.1-sol",
 \  "endpoint_url": "https://api.openai.com/v1/chat/completions",
 \  "max_tokens": 0,
 \  "max_completion_tokens": 0,
-\  "temperature": 1,
+\  "temperature": "",
 \  "request_timeout": 20,
 \  "stream": 1,
 \  "auth_type": "bearer",
@@ -114,12 +114,12 @@ let g:vim_ai_openai_chat = {
 \  "top_p": "",
 \  "reasoning": "",
 \}
+
 let g:vim_ai_openai_image = {
-\  "model": "dall-e-3",
+\  "model": "gpt-image-2.5-flare-2026-09-08",
 \  "endpoint_url": "https://api.openai.com/v1/images/generations",
-\  "quality": "standard",
+\  "quality": "medium",
 \  "size": "1024x1024",
-\  "style": "vivid",
 \  "request_timeout": 40,
 \  "auth_type": "bearer",
 \  "token_file_path": "",

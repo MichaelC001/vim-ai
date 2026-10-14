@@ -30,4 +30,4 @@ def test_role_chat_only():
 
 def test_explicit_image_roles():
     role_names = load_ai_role_names('image')
-    assert set(role_names) == { 'hd-image', 'hd', 'natural' }
+    assert set(role_names) == { 'high', 'medium-size' }

@@ -37,7 +37,6 @@ default_image_config = {
     "endpoint_url": "https://api.openai.com/v1/images/generations",
     "quality": "standard",
     "size": "1024x1024",
-    "style": "vivid",
     "token_file_path": "",
     "token_load_fn": "",
   },
@@ -197,21 +196,21 @@ def test_image_role():
     actual_context = make_ai_context({
         'config_default': default_image_config,
         'config_extension': {},
-        'user_instruction': '/hd-image picture of the moon',
+        'user_instruction': '/high picture of the moon',
         'user_selection': '',
         'command_type': 'image',
     })
     expected_options = {
         **default_image_config['options'],
         'token_file_path': '/custom/path/ai.token',
-        'quality': 'hd',
+        'quality': 'high',
     }
     expected_context = {
         'command_type': 'image',
         'config': { **default_image_config, 'options': expected_options },
         'prompt': 'picture of the moon',
         'command_type': 'image',
-        'roles': ['hd-image'],
+        'roles': ['high'],
     }
     assert expected_context == actual_context
 
